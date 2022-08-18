@@ -148,7 +148,7 @@ li {
 }
 
 .boxequipo{
-	width: 200px;
+	width: 20%;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -388,7 +388,8 @@ li {
     background-image: url("../images/header_proyectos.jpg");
     background-size: cover;
     background-position: left;
-	margin: 0;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 
@@ -402,13 +403,11 @@ li {
 
 .grid_info2{
 	grid-area: grid_info1;
-	width: 50%;
 }
 
 .grid_info3{
 	grid-area: grid_info1;
-	width: 50%;
-	padding-right: 20px;
+	padding-right: 90px;
 }
 
 .titulo_seccion{padding-top: 200px; font-size: 40px;font-family: 'Roboto', sans-serif; font-weight: 100; color: red; margin: 0}
@@ -416,8 +415,7 @@ li {
 .txt_parrafo{ font-family: 'Roboto', sans-serif;font-size: 15px;color: #3D3C3C; width: "50"; padding: 10px; }
 
 .img_proyectos{
-	width: 490px;
-	align-content: center;
+	width: 300px;
 	margin-right: auto;
 	margin-left: auto;
 	padding: 20px 10px 20px 10px;
