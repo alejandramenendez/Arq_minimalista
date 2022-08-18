@@ -127,7 +127,7 @@ li {
 	overflow: scroll;
 }
 
-/*SIN USO-OTRAS SECCION
+
 .grid_equipo{
 	width: 100%;
 	grid-area: grid_equipo;
@@ -152,7 +152,7 @@ li {
 	margin-right: auto;
 	margin-left: auto;
 }
-*/
+
 
 .img_equipo{
 	width: 460px;
@@ -365,6 +365,23 @@ li {
 
 
 /****** PROYECTOS - NO SE APLICO NI GRID NI MEDIA EN ESTA SECCION ******/
+
+.grid-container-proyectos{
+  	display: grid;
+	width: 100%;
+	margin: 0;
+	grid-template-rows: 50px 580px;
+    grid-template-areas:"grid_nav grid_nav"
+	                    "grid_header grid_header" 
+						"grid_info1 grid_info1"
+						"grid_info2 grid_info2"	
+						"grid_nota3 grid_nota3"
+						"grid_destacado grid_destacado"
+						"grid_contador grid_contador"
+						"grid_footer grid_footer";
+}
+
+
 .header_secciones{
     width: 100%;
 	height: 600px;
@@ -372,6 +389,26 @@ li {
     background-size: cover;
     background-position: left;
 	margin: 0;
+}
+
+
+.grid_info1{
+	grid-area: grid_info1;
+	width: 100%;
+	border-bottom: 1px solid red;
+	padding-left: 20px;
+	margin-top: 20px;
+}
+
+.grid_info2{
+	grid-area: grid_info1;
+	width: 50%;
+}
+
+.grid_info3{
+	grid-area: grid_info1;
+	width: 50%;
+	padding-right: 20px;
 }
 
 .titulo_seccion{padding-top: 200px; font-size: 40px;font-family: 'Roboto', sans-serif; font-weight: 100; color: red; margin: 0}
@@ -385,7 +422,6 @@ li {
 	margin-left: auto;
 	padding: 20px 10px 20px 10px;
 }
-
 
 .proyecto_destacado{
 	display: flex;
@@ -402,6 +438,20 @@ li {
 
 /****** SERVICIOS - NO SE APLICO NI GRID NI MEDIA EN ESTA SECCION ******/
 
+.grid-container-servicios{
+  	display: grid;
+	width: 100%;
+	margin: 0;
+	grid-template-rows: 50px 580px;
+    grid-template-areas:"grid_nav grid_nav"
+	                    "grid_header grid_header" 
+						"grid_ancho_pag grid_ancho_pag"
+						"grid_ancho_pag_a grid_ancho_pag_a"	
+						"grid_nota3 grid_nota3"
+						"grid_destacado grid_destacado"
+						"grid_contador grid_contador"
+						"grid_footer grid_footer";
+}
 
 .header_servicios{
     width:100%;
@@ -439,6 +489,7 @@ li {
 }
 
 .ancho_pag{
+	grid-area: grid_ancho_pag;
 	width: 100%;
 	margin-right: auto;
 	margin-left: auto;
@@ -463,6 +514,7 @@ li {
 }
 
 .ancho_pag_a{
+	grid-area: grid_ancho_pag_a;
 	width: 100%;
 	margin-right: auto;
 	margin-left: auto;
@@ -664,7 +716,77 @@ li {
 	padding-right: 40px;
 }
 
+/*ANIMACIONES Y TRANSFORMACIONES*/
 
+/*ANIMACION EN EL HOME*/
+
+ h1{
+     text-shadow: 2px 2px 2px black;
+     animation-duration: 2s;
+     animation-name: aparecer;
+     animation-delay: 5s;
+     animation-direction: alternate;
+     animation-iteration-count: infinite;
+	 letter-spacing: 3px;
+        }
+        
+   @keyframes aparecer {
+   0%{
+       opacity: 0; 
+    }
+
+   100%{
+       opacity: 1;
+    }
+}
+
+
+.logo_header:hover{
+  transform: scale(1.2);
+}
+
+
+  .grid_conocenos{
+         animation-name: conocenos2;
+         animation-duration: 2s;
+         animation-iteration-count: infinite;
+         animation-timing-function: ease;
+        }
+        
+    @keyframes conocenos2{
+         0%{
+            transform: translatey(40px);
+            }
+          100%{
+             transform: translatey(0px);
+            }
+        }
+
+/*ANIMACION en referencia, todas las secciones*/
+.txt_numero:hover{
+    -webkit-animation: 2s bote 1;
+}
+@-webkit-keyframes bote{
+    20%, 50%, 80%{
+        -webkit-transform: translateY(0);
+    }
+    40%{
+        -webkit-transform: translateY(-15px);
+    }
+    65%{
+        -webkit-transform: translateY(-15px);
+    }
+}
+
+
+.titulo_seccion:nth-child(1) {
+  display: block;
+  transform-origin: bottom center;
+}
+
+.titulo_seccion:nth-child(1):hover {
+  transform: translateX(-20px);
+} 
 
 /****** MOBILE ******/
 
